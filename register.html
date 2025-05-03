@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+    <link rel="icon" href="img/logo.png"alt="logo">
+</head>
+<style>
+    @font-face {
+          font-family: 'OCRAStd';
+          src: url('font/OCRAStd.otf') format('truetype');
+    }
+
+    body {
+    font-family: 'OCRAStd', sans-serif;
+    background-image: url('img/screen.png');
+    background-repeat: no-repeat;
+    background-size: 1540px;
+    background-position: 10% 0%;
+    }
+
+    #BMO {
+    position: absolute;
+    top: 22%;
+    left: 56%;
+    }
+
+    #nameInput {
+  width: 400px;          
+  height: 44px;          
+  font-size: 1.2em; 
+  font-family: 'OCRAStd';     
+  padding: 8px 14px;      
+  border: 2px solid #000000;
+  background: #757c7c; 
+  position: absolute;
+    top: 37%;
+    left: 49%;
+}
+
+#memoInput {
+  width: 280px;
+  height: 100px;
+  font-size: 1.1em;
+  padding: 10px 14px;
+  border: 2px solid #000000;
+  background: #757c7c;
+  resize: vertical;  
+  position: absolute;
+    top: 50%;
+    left: 53%;     
+}
+
+#submitBtn {
+  width: 180px;
+  height: 44px;
+  font-size: 1.1em;
+  font-family: 'OCRAStd', cursive;
+  border: 2px solid #000000;
+  background: #757c7c;
+  cursor: pointer;
+  position: absolute;
+    top: 70%;
+    left: 57%;
+  
+}
+
+input::placeholder, textarea::placeholder {
+  color: #dedddd;        
+  font-size: 1.1em;     
+  font-family: 'OCRAStd', cursive;
+  opacity: 1;  
+}
+
+.arrow-left {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  
+  cursor: pointer;
+}
+
+.arrow-left::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 42%;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  transform:  rotate(-45deg);
+}
+
+
+</style>
+
+<body>
+    <h2 id="BMO">- REGISTER -</h2>
+
+    <div class="input-box">
+        <input type="text" id="nameInput" placeholder="NAME" style="text-align: center;"/>
+        <textarea id="memoInput" placeholder="MESSAGES" style="text-align: center;"></textarea>
+        <button id="submitBtn" style="text-align: center;" >SUBMIT</button>
+        <button class="arrow-left" button id="backBtn" title="back"></button>
+
+      </div>
+      <p id="result"></p>
+
+      
+    
+      <script src="Re-su.js"></script>
+      <script src="back.js"></script>
+      
+
+</body>
+</html>

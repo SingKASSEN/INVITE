@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIST</title>
+    <link rel="icon" href="img/logo.png"alt="logo">
+</head>
+<style>
+    @font-face {
+          font-family: 'OCRAStd';
+          src: url('font/OCRAStd.otf') format('truetype');
+    }
+
+    body {
+    font-family: 'OCRAStd', sans-serif;
+    background-image: url('img/screen.png');
+    background-repeat: no-repeat;
+    background-size: 1540px;
+    background-position: 10% 0%;
+    }
+
+    .arrow-left {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  
+  cursor: pointer;
+}
+
+.arrow-left::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 42%;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  transform:  rotate(-45deg);
+}
+
+#BMO {
+    position: absolute;
+    top: 22%;
+    left: 58%;
+    }
+
+
+h2 {
+  color: #060606;
+  text-align: center;
+}
+
+#list {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#list li {
+  margin-bottom: 12px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  color: #000000;
+}
+
+
+</style>
+<body>
+    <h2 id="BMO">- LIST -</h2>
+    
+    <div class="input-box">
+    
+        <button class="arrow-left" button id="backBtn" title="back"></button>
+</div>
+
+<script>
+    window.onload = function() {
+      var saved = JSON.parse(localStorage.getItem('memoList') || '[]');
+      var list = document.getElementById('list');
+      list.innerHTML = '';
+      if(saved.length === 0) {
+        list.innerHTML = '<li>BECOME FIRST REGISTER!</li>';
+      } else {
+        saved.forEach(function(item) {
+          var li = document.createElement('li');
+          li.textContent = item.name + " : " + item.memo;
+          list.appendChild(li);
+        });
+      }
+    };
+  </script>
+
+<script src="back.js"></script>
+<script src="LIST.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree House</title>
+    <link rel="icon" href="img/logo.png"alt="logo">
+</head>
+
+
+<style>
+    @font-face {
+      font-family: 'Adventure Time Logo';
+      src: url('font/Adventure\ Time\ Logo.ttf') format('truetype');
+    }
+
+    h1 {
+       color: rgb(49, 45, 45);
+       font-family: 'Adventure Time Logo';
+    }
+
+    .modal-font {
+     font-family: 'Tempus Sans ITC';
+     src: url('font/TEMPSITC.TTF')
+    }
+
+    .modal-bg {
+        
+    position: fixed;
+    background-position: center;
+    width: 1500px;
+    height: 660px;
+    background-image: url('img/letter.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1.2s ease; 
+    pointer-events: none; 
+
+    }
+
+    .modal-bg.show {
+    opacity: 1;
+    pointer-events: auto;
+    }
+
+
+    .letter {
+        font-size: large;
+    }
+
+
+    body {
+      font-family: 'Tempus Sans ITC', sans-serif;
+    
+      background-image: url('img/Tree House.jpg');
+    background-repeat: no-repeat;
+    background-size: 1540px;
+    background-position: 50% 10%;
+    }
+
+    .enter-btn {
+  font-family: 'Tempus Sans ITC', cursive;
+  font-size: 1.0em;      
+  padding: 12px 32px;                   
+  cursor: grab;      
+  box-shadow: 0 2px 8px rgba(216, 216, 216, 0.734);
+  margin-top: 10px;   
+  margin-right: 60px;   
+}
+
+.close-btn {
+  font-family: 'Tempus Sans ITC', cursive;
+  font-size: 1.0em;      
+  padding: 12px 32px;                   
+  cursor: help;      
+  box-shadow: 0 2px 8px rgba(216, 216, 216, 0.734);
+  margin-top: 10px;      
+}
+
+.no-popup-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.no-popup {
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 40px 60px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.no-close-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  background: #ffe066;
+  font-family: 'Tempus Sans ITC';
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+abbr[title] {
+  text-decoration: none;     
+  border-bottom: none;        
+}
+
+</style>
+<body>
+
+<H1 style="text-align: center;">Welcome to Tree house</H1>
+
+<div class="modal-bg">
+    <div class="modal">
+        <div class="modal-content">
+            <h2>Invite</h2><br>
+            <p class="letter">Hey dudes!<br> <br>
+                Next Sunday is gonna be totally math-!<br><br>we're throwing a righteous 'movie party' at our treehouse! <br><br>
+                If you can make it, hit me up with a reply <u>ASAP!</u> <br><br>
+                And, like, <br><br>
+                P.S. If Ice King promises not to be a ding-dong <br><br>and keeps kind (literally!), <br><br>
+                he's totally invited!<br><br><br>
+                - Finn & Jake<br>
+            </p>
+            <a href="invite.html">
+            <button class="enter-btn" style="font-family: Tempus Sans ITC;"><abbr title="Adventure time!">Join :)</abbr></button></a>
+            <button class="close-btn" style="font-family: Tempus Sans ITC;"><abbr title="Are you sure?">No :(</button></abbr>
+        </div>
+    </div>
+</div>
+
+<div class="no-popup-bg" style="display:none;">
+    <div class="no-popup">
+      <p style="font-family: 'Tempus Sans ITC'; font-size: 1.2em;">
+        If you want to come back<br><br>
+        You have to start all over again...<br><br>
+        <button class="no-close-btn">Ok</button>
+      </p>
+    </div>
+  </div>
+  
+<script src="modal-fadein.js"></script>
+
+</body>
+</html>
